@@ -24,4 +24,3 @@ mean(gni_pcap_2013$YR2013)
 # 2. Construction of the dataset ----------------------------------------------
 
 
-html("http://www.mortality.org/hmd/AUT/STATS/Deaths_1x1.txt")
