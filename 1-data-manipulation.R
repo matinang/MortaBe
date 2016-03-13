@@ -49,3 +49,21 @@ lapply(selected_pop$cntr_code,
                             Female = "d", Male = "d", Total = "d")) %>%
            mutate(cntr_code = as.character(x))
          }) %>% rbind_all -> deathDB
+
+deathDB %>% group_by(Year, Age) %>%
+  summarise(Female = sum(Female), Male = sum(Male), Total = sum(Total)) ->
+  aggr_deathDB
+
+lapply(selected_pop$cntr_code,
+       function(x){
+         read_table(
+           paste0("Data/human-mortality-database/Exposures_1x1/",
+                  x, ".Exposures_1x1.txt"), skip = 2,
+           col_types = cols(Year = "i", Age = "i",
+                            Female = "d", Male = "d", Total = "d")) %>%
+           mutate(cntr_code = as.character(x))
+       }) %>% rbind_all -> expsrDB
+
+expsrDB %>% group_by(Year, Age) %>%
+  summarise(Female = sum(Female), Male = sum(Male), Total = sum(Total)) ->
+  aggr_expsrDB
