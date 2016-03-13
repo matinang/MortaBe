@@ -14,8 +14,7 @@ Mortality data for the selected countries has been obtained from the [Human Mort
 
 *Comments regarding this repo:*
 
-- *The country selection has not been reproduced yet, as the initial selection of European countries is not specified in the IA|BE report.*
+- *The country selection has not been fully reproduced, as the initial selection of European countries is not specified in the IA|BE report. The country selection in the reproduction is correct, however the country average deviates from the reported one.*
 - *In conformity with the [HMD User Agreement](http://www.mortality.org/Public/UserAgreement.php), the input data files are not distributed in this repository.*
-- *The data source as of 2013 for Belgium has not been specified, therefore the relevant data has not been included in the replication. The impact of this differences is to be estimated*
 
 
